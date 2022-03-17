@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP speed test</title>
+    <link
+      rel="icon"
+      href="https://cdn0.iconfinder.com/data/icons/deisgn-and-development-4/64/vector_615_05-512.png"
+    />
+    <link rel="stylesheet" href="style_type.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <fieldset id="deso">
+      <legend style="color: black">User Input</legend>
+      <form>
+        <select class="selection" id="inpu">
+          <option value="">--select level--</option>
+          <option value="2">easy</option>
+          <option value="3">Medium</option>
+          <option value="5">Hard</option>
+        </select>
+        <select class="selection" id="inpu2">
+          <option value="">--select time--</option>
+          <option value="60">sixty_second</option>
+          <option value="120">Two_minutes</option>
+          <option value="180">three_minutes</option>
+        </select>
+        <button
+          style="
+            border-radius: 10px;
+            background-color: rgba(98, 98, 104, 0.09);
+            backdrop-filter: blur(10px);
+          "
+          type="button"
+          id="btn"
+        >
+          Start
+        </button>
+      </form>
+      <div class="timer" id="timer1" style="color: black"></div>
+    </fieldset>
+    <div id="result" class="result">
+      <div class="dabba1">
+        your typing speed(WPM) is:
+        <p id="speed"></p>
+      </div>
+      <div class="dabba1">
+        your typing accuracy is:
+        <p id="accu"></p>
+      </div>
+      <div class="dabba1">
+        your total error is:
+        <p id="error"></p>
+      </div>
+      <div class="dabba1">
+        your highscore(WPM) is:
+        <p id="highscore"></p>
+      </div>
+      <button
+        onclick="location.reload()"
+        style="
+          height: 80px;
+          margin-top: 50px;
+          border-radius: 30px;
+          background-color: rgba(27, 27, 41, 0.268);
+        "
+      >
+        <img
+          src="restart.png"
+          style="width: 50px; border-radius: 50%; height: 30px"
+        />
+        restart
+      </button>
+    </div>
+    <div class="container">
+      <div class="txt_container" id="text">
+        <div class="txt_container5" id="text5">
+          <center>
+            <h5>Important instruction</h5>
+            Level of game is decided by the rate of scrolling if you are a
+            beginner---> choose easy <br />
+            intermediate--->choose medium <br />
+            pro ----> choose hard <br />
+          </center>
+        </div>
+      </div>
+      <textarea
+        placeholder="Type your Text here"
+        class="half"
+        id="text2"
+        cols="30"
+        rows="10"
+      ></textarea>
+    </div>
+    <script src="brain.js"></script>
+  </body>
+</html>

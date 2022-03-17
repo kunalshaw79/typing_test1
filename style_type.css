@@ -1,0 +1,106 @@
+body {
+  margin: 0px;
+  height: 150vh;
+  background-image: url("iitr.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: "Syne Mono", monospace;
+}
+* {
+  font-family: "Syne Mono", monospace;
+}
+.dabba1 {
+  background-color: rgba(0, 0, 0, 0.337);
+  font-size: 0.8rem;
+  width: 20%;
+  height: 80%;
+  margin: 1% 2% 5% 2%;
+  border-radius: 30px;
+  padding: 10px;
+}
+.dabba1 > p {
+  text-align: center;
+}
+#result {
+  margin-left: 10%;
+  height: 22vh;
+  width: 80%;
+  background-color: rgba(78, 78, 79, 0.309);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
+}
+.hola {
+  text-decoration: underline;
+}
+.correct {
+  color: rgb(19, 196, 10) !important;
+}
+.incorrect {
+  color: red !important;
+  text-decoration: dotted;
+}
+.container {
+  padding: 10px;
+  display: flex;
+}
+* {
+  font-size: 25px;
+}
+#text {
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(134, 186, 216));
+  width: 50%;
+  margin: 5px;
+  height: 55vh;
+  overflow-y: scroll;
+  border-radius: 10px;
+  padding: 3px;
+  overflow: hidden;
+}
+#deso {
+  color: white;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 2px dotted rgb(89, 86, 86);
+  margin: 5px;
+}
+.selection {
+  border-radius: 15px;
+  border: 2px solid rgb(90, 86, 86);
+  background-color: transparent;
+}
+.txt_container5 {
+  background-color: transparent;
+  width: 100%;
+  margin: 5px;
+  margin-top: 9vh;
+  height: 35vh;
+  overflow-y: scroll;
+  border-radius: 10px;
+  padding: 3px;
+}
+.half {
+  background-color: rgba(86, 86, 86, 0.315);
+  height: 50vh;
+  font-family: "Syne Mono", monospace;
+  width: 100vw;
+  margin: auto;
+  border: 2px solid white;
+  padding: 15px;
+  justify-self: center;
+  backdrop-filter: blur(5px);
+  color: white;
+  z-index: 1;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255);
+  opacity: 1; /* Firefox */
+}
