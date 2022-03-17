@@ -6,7 +6,7 @@ btn.addEventListener("click", fun1);
 // fetch dummytext from website
 //*********************************************************** fetch dummytext from website*****************************************************************
 function fun1() {
-  localStorage.setItem("high", 0);
+//   localStorage.setItem("high", 0);
   const d = new Date();
   window.start_time = d.getTime();
   var x = document.getElementById("inpu").value;
@@ -150,7 +150,7 @@ function high_score() {
   if (localStorage.getItem("high") == undefined) {
     high_speed = window.speed1;
     localStorage.setItem("high", JSON.stringify(high_speed));
-  } else {
+  } else if(localStorage.getItem("high") != undefined || localStorage.getItem("high") != null) {
     let new_high_score = JSON.parse(localStorage.getItem("high"));
     if (window.speed1 < high_speed) {
       console.log("jai shree ram");
