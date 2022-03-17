@@ -1,3 +1,6 @@
+//*****Have a small request to user please download my file in computer then uncomment the line 32 to 42 bcz
+//*****that api is best and give different results for every request and is also with out quotation
+//*****And delete the line 11 to 30 
 var btn = document.getElementById("btn");
 btn.addEventListener("click", fun1);
 // fetch dummytext from website
@@ -139,7 +142,9 @@ function calculate_result() {
   high_score();
 }
 //*************************************************checking and storing highscore in local storage*************************************************************
+
 var high_speed = 0;
+ localStorage.setItem("high", 0);
 function high_score() {
   if (localStorage.getItem("high") == undefined) {
     high_speed = window.speed1;
