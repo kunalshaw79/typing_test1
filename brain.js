@@ -4,9 +4,9 @@
 var btn = document.getElementById("btn");
 btn.addEventListener("click", fun1);
 // fetch dummytext from website
+  localStorage.setItem("high", 0);
 //*********************************************************** fetch dummytext from website*****************************************************************
 function fun1() {
-//   localStorage.setItem("high", 0);
   const d = new Date();
   window.start_time = d.getTime();
   var x = document.getElementById("inpu").value;
@@ -151,14 +151,14 @@ function high_score() {
     high_speed = window.speed1;
     localStorage.setItem("high", JSON.stringify(high_speed));
   } else if(localStorage.getItem("high") != undefined || localStorage.getItem("high") != null) {
-    let new_high_score = JSON.parse(localStorage.getItem("high"));
+//     let new_high_score = JSON.parse(localStorage.getItem("high"));
     if (window.speed1 < high_speed) {
       console.log("jai shree ram");
     } else if (window.speed1 > high_speed) {
       high_speed = window.speed1;
       localStorage.setItem("high", JSON.stringify(high_speed));
     }
-    document.getElementById("highscore").innerText = new_high_score;
+    document.getElementById("highscore").innerText = JSON.parse(localStorage.getItem("high"));
     // console.log(new_high_score);
   }
 }
