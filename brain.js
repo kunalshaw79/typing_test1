@@ -6,6 +6,7 @@ btn.addEventListener("click", fun1);
 // fetch dummytext from website
 //*********************************************************** fetch dummytext from website*****************************************************************
 function fun1() {
+  localStorage.setItem("high", 0);
   const d = new Date();
   window.start_time = d.getTime();
   var x = document.getElementById("inpu").value;
@@ -144,7 +145,6 @@ function calculate_result() {
 //*************************************************checking and storing highscore in local storage*************************************************************
 
 var high_speed = 0;
- localStorage.setItem("high", 0);
 function high_score() {
   if (localStorage.getItem("high") == undefined) {
     high_speed = window.speed1;
