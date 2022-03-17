@@ -56,8 +56,9 @@ function fun1() {
       );
       if (rel == true) {
         location.reload();
-        rel = false;
-        y = y - 1;
+        location.href = "https://kunalshaw79.github.io/typing_test1/";
+//         rel = false;
+//         y = y - 1;
       }
     } else {
       y = y - 1;
