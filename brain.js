@@ -1,6 +1,7 @@
 var btn = document.getElementById("btn");
 btn.addEventListener("click", fun1);
 // fetch dummytext from website
+//*********************************************************** fetch dummytext from website*****************************************************************
 function fun1() {
   const d = new Date();
   window.start_time = d.getTime();
@@ -25,6 +26,20 @@ function fun1() {
       console.log(txt);
       Com(txt);
     });
+    //this is not secure and has no https so its api is not fetching in github you may install it in your pc
+  //*****************************************This is faster than existing one but not https so not supported or fetching in github****************************************************
+//   fetch(`http://metaphorpsum.com/paragraphs/${x}/10`)
+//     .then((response) => {
+//       return response.text();
+//     })
+//     .then((data) => {
+//       document.getElementById("text5").innerText = "";
+//       var txt = data;
+//       window.txt2 = data;
+//       //   console.log(txt)
+//       Com(txt);
+//     });
+//  *******************************************************************************************************************************************************************
   // Node(no cros)
   // timer
   var y = document.getElementById("inpu2").value;
@@ -36,7 +51,7 @@ function fun1() {
         "😃ho gaya khatam! tata! 🙋‍♂️🤟bye!bye! phir test karna cahate ho kya?"
       );
       if (rel == true) {
-        window.location = "typing.html";
+        location.reload();
         rel = false;
         y = y - 1;
       }
@@ -48,17 +63,17 @@ function fun1() {
   setInterval(timer, 1000);
   setInterval(fun2, 2000);
 }
-// auto scrollig defines the difficulty
+//******************************************************** auto scrollig defines the difficulty*****************************************************************
 fun2 = () => {
   var x = document.getElementById("inpu").value;
   u = x * 1.4;
   document.getElementById("text5").scrollBy(0, `${u}`);
 };
 
-//all in one
+//*************************************************************************all in one function***************************************************************
 function Com(txt) {
   var txt_arr = txt.split(" ");
-  //appening_each_txt_in_span to change color of txt by changing class
+   //***************************************************for coluring text**************************************************************************************
   appening_each_txt_in_span = () => {
     txt_array = txt.split(" ");
     txt_array.forEach((char) => {
@@ -82,7 +97,7 @@ function Com(txt) {
         console.log("skip this event");
       }
       {
-        //counting and checking error
+//***********************************************counting and checking error************************************************************************************
         var txt_in = document.getElementById("text2").value;
         var txt_in_arr = txt_in.split(" ");
         window.corr = 0;
@@ -110,7 +125,7 @@ function Com(txt) {
     })
   );
 }
-//calculating and inserting data
+//********************************************************calculating and inserting data********************************************************************
 function calculate_result() {
   total_word = document.getElementById("text2").value;
   total_word_count = total_word.split(" ").length;
@@ -123,7 +138,7 @@ function calculate_result() {
   document.getElementById("accu").innerText = ":" + accuracy;
   high_score();
 }
-//checking and storing highscore in local storage
+//*************************************************checking and storing highscore in local storage*************************************************************
 var high_speed = 0;
 function high_score() {
   if (localStorage.getItem("high") == undefined) {
