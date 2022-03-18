@@ -2,30 +2,26 @@
 //*****that api is best and give different results for every request and is also with out quotation
 //*****And delete the line 11 to 30 
 var btn = document.getElementById("btn");
+  var btn1= document.getElementById("btn");
+btn1.addEventListener("click", store);
+store=()=>{
+   localStorage.setItem("high", 0);
+  location.reload();
+}
 btn.addEventListener("click", fun1);
 // fetch dummytext from website
-  localStorage.setItem("high", 0);
 //*********************************************************** fetch dummytext from website*****************************************************************
 function fun1() {
   const d = new Date();
   window.start_time = d.getTime();
   var x = document.getElementById("inpu").value;
-  fetch(`https://quotable.io/quotes?page=${x}}`)
+  fetch(`paragraph.txt`)
     .then((response) => {
-      return response.json();
+      return response.text();
     })
     .then((data) => {
       document.getElementById("text5").innerText = " ";
-      var txt =
-        JSON.stringify(data.results[0].content.replace(/"/g,'')) +
-        JSON.stringify(data.results[1].content.replace(/"/g,'')) +
-        JSON.stringify(data.results[2].content.replace(/"/g,'')) +
-        JSON.stringify(data.results[3].content.replace(/"/g,'')) +
-        JSON.stringify(data.results[4].content.replace(/"/g,'')) +
-        JSON.stringify(data.results[5].content.replace(/"/g,'')) +
-        JSON.stringify(data.results[6].content.replace(/"/g,'')) +
-        JSON.stringify(data.results[7].content.replace(/"/g,'')) +
-        JSON.stringify(data.results[8].content);
+      var txt =data
       window.txt2 = data;
       console.log(txt);
       Com(txt);
