@@ -1,6 +1,6 @@
-//*****Have a small request to user please download my file in computer then uncomment the line 32 to 42 bcz
-//*****that api is best and give different results for every request and is also with out quotation
-//*****And delete the line 11 to 30 
+//*****Have a small request to user please download my file in computer then uncomment the line 31 to 41 bcz
+//*****that api is best and give different results for every request and is also push very fast response
+//*****And delete the line 17 to 28 
 var btn = document.getElementById("btn");
   var btn1= document.getElementById("btn1");
 btn1.addEventListener("click", store=()=>{
