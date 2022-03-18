@@ -51,7 +51,7 @@ function fun1() {
         "😃ho gaya khatam! tata! 🙋‍♂️🤟bye!bye! phir test karna cahate ho kya?"
       );
       if (rel == true) {
-        location.reload();
+//         location.reload();
         location.href = "https://kunalshaw79.github.io/typing_test1/";
 //         rel = false;
 //         y = y - 1;
