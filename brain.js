@@ -3,11 +3,10 @@
 //*****And delete the line 11 to 30 
 var btn = document.getElementById("btn");
   var btn1= document.getElementById("btn");
-btn1.addEventListener("click", store);
-store=()=>{
+btn1.addEventListener("click", store=()=>{
    localStorage.setItem("high", 0);
   location.reload();
-}
+});
 btn.addEventListener("click", fun1);
 // fetch dummytext from website
 //*********************************************************** fetch dummytext from website*****************************************************************
