@@ -2,7 +2,7 @@
 //*****that api is best and give different results for every request and is also with out quotation
 //*****And delete the line 11 to 30 
 var btn = document.getElementById("btn");
-  var btn1= document.getElementById("btn");
+  var btn1= document.getElementById("btn1");
 btn1.addEventListener("click", store=()=>{
    localStorage.setItem("high", 0);
   location.reload();
@@ -14,13 +14,14 @@ function fun1() {
   const d = new Date();
   window.start_time = d.getTime();
   var x = document.getElementById("inpu").value;
-  fetch(`paragraph.txt`)
+  fetch(`https://type.fit/api/quotes?milength=${x}`)
     .then((response) => {
-      return response.text();
+      return response.json();
     })
     .then((data) => {
       document.getElementById("text5").innerText = " ";
-      var txt =data
+      var txt =data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text+
+      data[Math.floor(Math.random() * 100)].text+data[Math.floor(Math.random() * 100)].text;
       window.txt2 = data;
       console.log(txt);
       Com(txt);
